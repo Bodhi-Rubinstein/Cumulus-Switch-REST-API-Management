@@ -1,0 +1,401 @@
+{
+    "format": "JSON",
+    "title": "Chameleon Cloud",
+    "ztp": null,
+    "content": {
+        "nodes": {
+            "Olympus": {
+                "nic_model": "e1000",
+                "cpu": 1,
+                "memory": 1024,
+                "storage": 10,
+                "positioning": {
+                    "x": 594.7087760505613,
+                    "y": 829.0595956872979
+                },
+                "os": "generic/ubuntu2204",
+                "features": {
+                    "uefi": false,
+                    "tpm": false
+                },
+                "pxehost": false,
+                "secureboot": false,
+                "oob": false,
+                "emulation_type": null,
+                "network_pci": {}
+            },
+            "SN2100-1": {
+                "nic_model": "virtio",
+                "cpu": 1,
+                "memory": 2048,
+                "storage": 10,
+                "positioning": {
+                    "x": 557,
+                    "y": 545
+                },
+                "os": "cumulus-vx-5.6.0",
+                "features": {
+                    "uefi": false,
+                    "tpm": false
+                },
+                "pxehost": false,
+                "secureboot": false,
+                "oob": false,
+                "emulation_type": null,
+                "network_pci": {}
+            },
+            "Tharm01": {
+                "nic_model": "e1000",
+                "cpu": 1,
+                "memory": 1024,
+                "storage": 10,
+                "positioning": {
+                    "x": 20.412427521785958,
+                    "y": 265.78092290967413
+                },
+                "os": "generic/ubuntu2204",
+                "features": {
+                    "uefi": false,
+                    "tpm": false
+                },
+                "pxehost": false,
+                "secureboot": false,
+                "oob": false,
+                "emulation_type": null,
+                "network_pci": {}
+            },
+            "Tharm02": {
+                "nic_model": "e1000",
+                "cpu": 1,
+                "memory": 1024,
+                "storage": 10,
+                "positioning": {
+                    "x": 265.55571298490827,
+                    "y": 268.535341847462
+                },
+                "os": "generic/ubuntu2204",
+                "features": {
+                    "uefi": false,
+                    "tpm": false
+                },
+                "pxehost": false,
+                "secureboot": false,
+                "oob": false,
+                "emulation_type": null,
+                "network_pci": {}
+            },
+            "Tharm03": {
+                "nic_model": "e1000",
+                "cpu": 1,
+                "memory": 1024,
+                "storage": 10,
+                "positioning": {
+                    "x": 553.3924919837428,
+                    "y": 274.0441797230378
+                },
+                "os": "generic/ubuntu2204",
+                "features": {
+                    "uefi": false,
+                    "tpm": false
+                },
+                "pxehost": false,
+                "secureboot": false,
+                "oob": false,
+                "emulation_type": null,
+                "network_pci": {}
+            },
+            "Tharm04": {
+                "nic_model": "e1000",
+                "cpu": 1,
+                "memory": 1024,
+                "storage": 10,
+                "positioning": {
+                    "x": 777.8776354134561,
+                    "y": 275.4213891919317
+                },
+                "os": "generic/ubuntu2204",
+                "features": {
+                    "uefi": false,
+                    "tpm": false
+                },
+                "pxehost": false,
+                "secureboot": false,
+                "oob": false,
+                "emulation_type": null,
+                "network_pci": {}
+            }
+        },
+        "links": [
+            [
+                {
+                    "interface": "eth0",
+                    "node": "Olympus",
+                    "mac": "48:b0:2d:7f:63:42",
+                    "network_pci": null
+                },
+                {
+                    "interface": "swp5",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:d5:66:de",
+                    "network_pci": null
+                }
+            ],
+            [
+                {
+                    "interface": "swp1",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:69:4e:36",
+                    "network_pci": null
+                },
+                {
+                    "interface": "eth0",
+                    "node": "Tharm01",
+                    "mac": "48:b0:2d:98:22:65",
+                    "network_pci": null
+                }
+            ],
+            [
+                {
+                    "interface": "swp2",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:a2:62:16",
+                    "network_pci": null
+                },
+                {
+                    "interface": "eth0",
+                    "node": "Tharm02",
+                    "mac": "48:b0:2d:a1:f9:6e",
+                    "network_pci": null
+                }
+            ],
+            [
+                {
+                    "interface": "swp3",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:24:fc:c0",
+                    "network_pci": null
+                },
+                {
+                    "interface": "eth0",
+                    "node": "Tharm03",
+                    "mac": "48:b0:2d:07:78:74",
+                    "network_pci": null
+                }
+            ],
+            [
+                {
+                    "interface": "swp4",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:1f:b0:c9",
+                    "network_pci": null
+                },
+                {
+                    "interface": "eth0",
+                    "node": "Tharm04",
+                    "mac": "48:b0:2d:18:50:8f",
+                    "network_pci": null
+                }
+            ],
+            [
+                {
+                    "interface": "eth1",
+                    "node": "Olympus",
+                    "mac": "48:b0:2d:d0:df:e9",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth2",
+                    "node": "Olympus",
+                    "mac": "48:b0:2d:7e:48:ac",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth0",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:91:39:3f",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp10",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:f2:1f:c9",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp11",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:88:94:04",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp12",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:ae:d6:5d",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp13",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:45:61:ef",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp14",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:71:59:db",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp15",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:17:0d:52",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp16",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:e0:22:5c",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp6",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:01:98:17",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp7",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:04:48:c2",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp8",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:a9:c3:a6",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "swp9",
+                    "node": "SN2100-1",
+                    "mac": "48:b0:2d:3c:30:67",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth1",
+                    "node": "Tharm01",
+                    "mac": "48:b0:2d:1f:9c:b0",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth2",
+                    "node": "Tharm01",
+                    "mac": "48:b0:2d:01:b5:e4",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth1",
+                    "node": "Tharm02",
+                    "mac": "48:b0:2d:3d:79:79",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth2",
+                    "node": "Tharm02",
+                    "mac": "48:b0:2d:26:cf:24",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth1",
+                    "node": "Tharm03",
+                    "mac": "48:b0:2d:49:09:7c",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth2",
+                    "node": "Tharm03",
+                    "mac": "48:b0:2d:b8:13:a7",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth1",
+                    "node": "Tharm04",
+                    "mac": "48:b0:2d:0f:37:fe",
+                    "network_pci": null
+                },
+                "unconnected"
+            ],
+            [
+                {
+                    "interface": "eth2",
+                    "node": "Tharm04",
+                    "mac": "48:b0:2d:8f:dd:f1",
+                    "network_pci": null
+                },
+                "unconnected"
+            ]
+        ],
+        "oob": false,
+        "netq": false
+    }
+}
