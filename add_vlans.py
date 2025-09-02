@@ -90,19 +90,20 @@ def nvue_get(path):
 if __name__ == "__main__":
     #interface_list = ['swp1','swp2']
     interface="swp1"
+    bridge="br"
     vlan_id = "300"
     payload = {
         vlan_id: {}
     }
-    apply_new_config(f"/interface/{interface}/bridge/domain/br/vlan",payload)
+    apply_new_config(f"/interface/{interface}/bridge/domaini/{br}/vlan",payload)
     time.sleep(DUMMY_SLEEP)
-    nvue_get(f"/interface/{interface}/bridge/domain/br/vlan")
+    nvue_get(f"/interface/{interface}/bridge/domain/{br}/vlan")
 """
     for interface in interface_list:
         payload = {
             f"100,200,{vlan_id}: {{}}"
         }
-        apply_new_config(f"/interface/{interface}/bridge/domain/br/vlan",payload)
+        apply_new_config(f"/interface/{interface}/bridge/domain/{br}/vlan",payload)
         time.sleep(DUMMY_SLEEP)
-        nvue_get(f"/interface/{interface}/bridge/domain/br/vlan")
+        nvue_get(f"/interface/{interface}/bridge/domain/{br}/vlan")
 """
