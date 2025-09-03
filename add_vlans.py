@@ -2,13 +2,23 @@
 
 #edited python stub from docs: https://docs.nvidia.com/networking-ethernet-software/cumulus-linux-55/System-Configuration/NVIDIA-User-Experience-NVUE/NVUE-API/
 
+##USAGE
+# ./add_vlans.py <vlan_id> <interface> <bridge> <remove(optional)>
+# 
+# Ex (Add VLAN 500): ./add_vlans.py 500 swp1 br
+# Ex (Remove VLAN 500): ./add_vlans.py 500 swp1 br remove
+
+##Notes
+# - Change auth username and password to correct creds
+# - Change nvue_end_point to point to correct switch IP
 import requests
 from requests.auth import HTTPBasicAuth
 import json
 import time
+import sys
 
 auth = HTTPBasicAuth(username="cumulus", password="password")
-nvue_end_point = "https://127.0.0.1:8765/nvue_v1" # localhost endpoint
+nvue_end_point = "https://127.0.0.1:8765/nvue_v1" # localhost endpoint; Change to switch IP and NVUE port
 mime_header = {"Content-Type": "application/json"}
 
 DUMMY_SLEEP = 5  # In seconds
@@ -88,14 +98,25 @@ def nvue_get(path):
     print_response(r)
 
 if __name__ == "__main__":
+    if (len(sys.argv) < 4):
+        print("Usage: ./add_vlans.py <vlan_id> <interface> <bridge> <remove(optional)>")
+        sys.exit(1)
     #interface_list = ['swp1','swp2']
-    interface="swp1"
-    bridge="br"
-    vlan_id = "300"
+    vlan_id = sys.argv[1]
+    interface=sys.argv[2]
+    bridge=sys.argv[3]
+
+    #Default payload adds vlan_id
     payload = {
         vlan_id: {}
     }
-    apply_new_config(f"/interface/{interface}/bridge/domaini/{bridge}/vlan",payload)
+
+    #Remove vlan if cli arg is passed
+    if (len(sys.argv) > 4 and sys.argv[4].lower() == "remove"):
+        payload = {
+            vlan_id: None
+        }
+    apply_new_config(f"/interface/{interface}/bridge/domain/{bridge}/vlan",payload)
     time.sleep(DUMMY_SLEEP)
     nvue_get(f"/interface/{interface}/bridge/domain/{bridge}/vlan")
 """
